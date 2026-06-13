@@ -1,0 +1,555 @@
+@font-face {
+    font-family: 'vazir';
+    src: url('../fonts/Vazir.woff2') format('woff2');
+    font-display: swap;
+}
+
+* {
+    padding: 0%;
+    margin: 0;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    /* حذف اسکرول افقی */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    direction: rtl;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: vazir;
+    direction: rtl;
+    text-align: justify;
+    line-height: 1.8;
+    background: #0B132B;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* header styles */
+
+#header {
+    display: flex;
+    background: white;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    margin: 30px;
+    padding: 10px 20px;
+}
+
+/* logo */
+
+#header .logo-link {
+    line-height: 0%;
+}
+
+#header .logo-link .logo-img {
+    width: 60px;
+}
+
+/* header list */
+
+#header .navbar-list {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+/* افکت هاور برای لینک‌های منو */
+#header .navbar-list a {
+    transition: 0.4s;
+    /* برای اینکه تغییر رنگ نرم باشه */
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+#header .navbar-list a:hover {
+    color: #0B132B;
+    /* تغییر رنگ متن به زرد */
+    background-color: yellow;
+    /* یک پس‌زمینه خیلی ملایم سرمه‌ای */
+}
+
+/* تغییر رنگ آیکون‌ها هنگام هاور */
+#header .navbar-list a:hover i {
+    color: #0B132B;
+}
+
+/* contant link */
+
+#header .header-contant-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    border: 2px solid #0B132B;
+    color: #0B132B;
+    padding: 10px 5px;
+    margin: 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.4s;
+    font-family: 'vazir';
+    font-weight: bold;
+}
+
+#header .header-contant-link:hover {
+    background-color: yellow;
+    border-color: rgb(210, 210, 0);
+    color: #0B132B;
+}
+
+/* ----- main ----- */
+
+#index-main {
+    width: 95%;
+    /* پهن‌ترین عرض ممکن برای کل محتوا */
+    max-width: 1600px;
+    /* برای اینکه در مانیتورهای خیلی بزرگ، خیلی کش نیاید */
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* h1 */
+
+#index-main .main-titel {
+    color: white;
+    margin-bottom: 0;
+    /* فاصله از زیر حذف شد */
+    padding: 0 40px;
+    /* پدینگ فقط از طرفین */
+}
+
+/* p */
+
+#index-main .main-paragraph {
+    color: white;
+    padding: 20px 40px;
+    /* پدینگ بالا رو کم کردم تا به تایتل نزدیک‌تر بشه */
+    line-height: 35px;
+}
+
+.highlight-yellow {
+    color: #ffcb6b;
+    text-shadow: 0 0 10px rgba(255, 203, 107, 0.3);
+    /* درخشش ملایم */
+    font-weight: bold;
+}
+
+/* main-skills */
+
+#index-main .main-skills {
+    color: yellow;
+    margin-bottom: 0;
+    margin-top: 40px;
+    padding: 0 40px;
+}
+
+#index-main .skills-paragraph {
+    color: white;
+    padding: 20px 40px;
+}
+
+/* skills card */
+
+
+.skills-list {
+    display: grid;
+    /* این یعنی ۴ ستونِ کاملاً مساوی داشته باش */
+    grid-template-columns: repeat(4, 1fr);
+    /* این فاصله بین کارت‌ها را زیادتر می‌کند */
+    gap: 30px;
+    margin: 60px 0;
+    /* فاصله از بالا و پایین */
+    padding: 0;
+}
+
+.skills-list .skills-card {
+    background: white;
+    border-radius: 25px;
+    padding: 30px;
+    /* پدینگ بیشتر برای حسِ فضای بازتر داخل کارت */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* فاصله تایتل از متن داخل کارت */
+    text-align: justify;
+    /* متن داخل کارت‌ها هم تراز شود */
+    border: 1px solid #1C2541;
+    /* حاشیه ملایم برای عمق دادن */
+}
+
+.skills-list .skills-card h3 {
+    color: #0B132B;
+    margin: 0;
+    font-size: 1.3rem;
+    /* کمی بزرگتر برای بهتر دیده شدن */
+}
+
+/* افکت سه بعدی کارت‌ها */
+.skills-card {
+    /* سایر استایل‌های قبلی تو ... */
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+}
+
+.skills-card:hover {
+    /* چرخش جزئی در محورهای X و Y برای حس سه بعدی */
+    transform: rotateX(10deg) rotateY(10deg) translateZ(20px);
+
+    /* اضافه شدن یک سایه عمیق‌تر برای حس شناور بودن */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+
+    /* لرزش ملایم و حس عمق بیشتر */
+    cursor: pointer;
+}
+
+/* واکنش‌گرایی (برای موبایل و تبلت) - واجب */
+@media (max-width: 1024px) {
+    .skills-list {
+        grid-template-columns: repeat(2, 1fr);
+        /* ۲ در ۲ */
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-list {
+        grid-template-columns: 1fr;
+        /* تکی */
+    }
+}
+
+
+
+/* footer */
+
+#footer {
+    background: #1C2541;
+    margin-top: 80px;
+    /* فاصله از بخش بالایی */
+    padding: 40px 20px;
+    /* پدینگ را کمتر کردم تا فوتر جمع‌وجورتر شود */
+    color: white;
+}
+
+#footer .footer-box {
+    display: flex;
+    justify-content: space-between;
+    /* این باعث می‌شود ستون‌ها به طرفین بچسبند */
+    max-width: 900px;
+    /* عرض محدود برای اینکه خیلی از هم دور نشوند */
+    margin: 0 auto;
+    /* وسط‌چین کردن کل فوتر */
+    align-items: flex-start;
+    /* تنظیم هم‌ترازی از بالا برای اینکه عناوین در یک سطح باشند */
+}
+
+#footer ul {
+    margin-top: 15px;
+    /* فاصله عنوان از لیست */
+}
+
+#footer a {
+    #footer a {
+        color: #ffffff;
+        transition: 0.3s;
+    }
+}
+
+#footer a:hover {
+    color: rgba(255, 255, 0, 0.943);
+}
+
+#footer ul li {
+    margin-bottom: 12px;
+    /* فاصله بین لینک‌ها */
+}
+
+#footer h3 {
+    color: white;
+    /* رنگ زرد */
+    margin-bottom: 10px;
+}
+
+#footer ul li {
+    margin-bottom: 10px;
+    /* این فاصله بین لینک‌ها رو ایجاد می‌کنه */
+}
+
+#footer .go-top-link {
+    background: #0B132B;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+/* -------------------- About me ---------------- */
+
+#about-me-main {
+    width: 95%;
+    /* پهن‌ترین عرض ممکن برای کل محتوا */
+    max-width: 1600px;
+    /* برای اینکه در مانیتورهای خیلی بزرگ، خیلی کش نیاید */
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+#about-me-main .about-me-titel {
+    color: yellow;
+    margin-bottom: 0;
+    /* فاصله از زیر حذف شد */
+    padding: 0 40px;
+    /* پدینگ فقط از طرفین */
+}
+
+#about-me-main .about-me-paragraph {
+    color: white;
+    padding: 20px 40px;
+    /* پدینگ بالا رو کم کردم تا به تایتل نزدیک‌تر بشه */
+    line-height: 35px;
+}
+
+#about-me-main .about-me-image {
+    display: block;
+    /* این دستور باعث می‌شود بتوانیم از margin: auto استفاده کنیم */
+    margin: 40px auto 0 auto;
+    /* بالا 40px، چپ و راست auto (وسط‌چین)، پایین 0 */
+    width: 40%;
+    /* اندازه عکس */
+    min-width: 300px;
+    /* برای اینکه در موبایل بیش از حد کوچک نشود */
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    /* یک سایه ملایم برای جلوه بهتر */
+}
+
+#about-me-main .about-me-image-titel {
+    color: rgba(255, 255, 0, 0.943);
+    text-align: center;
+    margin-top: 30px;
+}
+
+/*------------------- projects -------------------*/
+
+/* استایل کلی بخش پروژه‌ها */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 40px;
+}
+
+/* استایل کارت‌های شیشه‌ای و خفن */
+.project-card {
+    background: rgba(28, 37, 65, 0.6);
+    /* رنگ زمینه تیره با شفافیت */
+    backdrop-filter: blur(10px);
+    /* افکت مات‌کنندگی پشت کارت */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 25px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* افکت هنگام رفتن موس روی کارت */
+.project-card:hover {
+    transform: translateY(-15px);
+    border-color: yellow;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 0, 0.2);
+}
+
+.project-card h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    color: #cbd5e0;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* دکمه اختصاصی خفن */
+.project-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #ffcb6b, #ffb300);
+    color: #0B132B;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-btn:hover {
+    background: white;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+/* تنظیمِ فاصله کلیِ بخشِ پروژه‌ها از هدر و فوتر */
+.category-section {
+    margin: 40px 0;
+    padding: 0 5%;
+}
+
+/* فاصله بین کارت‌ها */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    padding: 20px 0;
+}
+
+/* فاصله داخلی کارت‌ها (داخلیِ متن) */
+.project-card {
+    background: rgba(28, 37, 65, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 35px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-15px);
+    border-color: yellow;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 0, 0.2);
+}
+
+.category-title {
+    color: #ffffff;
+    font-size: 2rem;
+    margin: 80px 5% 40px 5%;
+    /* فاصله از بالا و حاشیه از طرفین */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* خط تزئینی کنار عنوان */
+.category-title::before {
+    content: "";
+    width: 8px;
+    height: 40px;
+    background: #ffcb6b;
+    border-radius: 5px;
+}
+
+/*---------------- Notes ----------------*/
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* ۳ ستون در دسکتاپ */
+    gap: 30px;
+    padding: 20px 40px;
+}
+
+.note-card {
+    background: rgba(28, 37, 65, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-right: 5px solid #ffcb6b;
+}
+
+.note-card:hover {
+    transform: translateY(-10px);
+    background: rgba(28, 37, 65, 0.8);
+    border-right-width: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.note-text {
+    font-size: 1.1rem;
+    color: #ffffff;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-family: 'vazir';
+}
+
+.note-author {
+    color: #ffcb6b;
+    font-weight: bold;
+    display: block;
+}
+
+/* ریسپانسیو برای تبلت و موبایل */
+@media (max-width: 1024px) {
+    .notes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .notes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ۱. جلوگیری از بیرون‌زدگی محتوا */
+* {
+    box-sizing: border-box;
+    /* پدینگ و حاشیه را داخل عرضِ عنصر محاسبه می‌کند */
+    max-width: 100%;
+    /* هیچ عنصری اجازه ندارد از صفحه بزرگتر شود */
+}
+
+/* ۲. مدیریتِ تصاویر */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ۳. مدیریتِ هدر برای موبایل */
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        gap: 15px;
+        margin: 10px;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .navbar-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .main-titel,
+    .main-paragraph,
+    .main-skills,
+    .skills-paragraph {
+        padding: 0 15px !important;
+        /* کاهش پدینگ برای فضای بیشتر در موبایل */
+    }
+}
