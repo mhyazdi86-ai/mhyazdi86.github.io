@@ -462,7 +462,7 @@ a {
 }
 
 .vibe-card {
-    width: 100%;
+    width: 40%;
     max-width: 440px; /* عرض بزرگ‌تر */
     padding: 45px;     /* ارتفاع و طول بیشتر با پدینگ بیشتر */
     margin: 0 auto;   
