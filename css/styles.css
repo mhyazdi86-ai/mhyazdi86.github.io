@@ -422,6 +422,7 @@ a {
     padding: 20px 0;
 }
 
+
 /* فاصله داخلی کارت‌ها (داخلیِ متن) */
 .project-card {
     background: rgba(28, 37, 65, 0.6);
@@ -458,6 +459,18 @@ a {
     height: 40px;
     background: #ffcb6b;
     border-radius: 5px;
+}
+
+/* کلاس اختصاصی برای کارت Vibe5 (بزرگ‌تر و کشیده‌تر از بقیه، و دقیقاً وسط) */
+.vibe-card {
+    width: 100%;
+    max-width: 440px;
+    /* کمی بزرگ‌تر کردن عرض کارت نسبت به بقیه */
+    padding: 45px;
+    /* کمی بیشتر کردن فاصله داخلی (طول و ارتفاع کارت) */
+    margin: 0 auto;
+    grid-column: 1 / -1;
+    justify-self: center;
 }
 
 /*---------------- Notes ----------------*/
