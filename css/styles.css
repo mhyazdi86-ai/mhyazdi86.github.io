@@ -463,15 +463,12 @@ a {
 
 .vibe-card {
     width: 100%;
-    max-width: 440px;
-    /* کمی بزرگ‌تر کردن عرض کارت نسبت به بقیه */
-    padding: 45px;
-    /* کمی بیشتر کردن فاصله داخلی (طول و ارتفاع کارت) */
-    margin: 0 auto;
-    grid-column: 1 / -1;
+    max-width: 440px; /* عرض بزرگ‌تر */
+    padding: 45px;     /* ارتفاع و طول بیشتر با پدینگ بیشتر */
+    margin: 0 auto;   
+    grid-column: 1 / -1; 
     justify-self: center;
 }
-
 /*---------------- Notes ----------------*/
 
 .notes-grid {
